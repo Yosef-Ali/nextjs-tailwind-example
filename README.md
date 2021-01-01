@@ -86,7 +86,7 @@ tailwind.config.js
 
 Inside of `src/styles` we will create tailwind.css with the default layers and delete the other default css files. _`src/styles/tailwind.css`_
 
-```js
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -113,29 +113,28 @@ To get the **TailwindCSS autocompletion** in your components you might need to r
 `index.js` is the home page of your Next.js project, replace the content with your`s.
 
 ```jsx
-import Head from 'next/head'
+import Head from 'next/head';
 
 export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>Next.js example!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	return (
+		<div>
+			<Head>
+				<title>Next.js example!</title>
+				<link rel='icon' href='/favicon.ico' />
+			</Head>
 
-      <main className="min-h-screen flex flex-col justify-center">
-        <img
-          className="m-auto my-4 w-24 sm:w-auto"
-          alt="Ihatetomatoes"
-          src="/assets/img_logo.svg"
-        />
-        <h1 className="mx-auto text-4xl font-bold">
-          Welcome to Next.js example!
-        </h1>
-      </main>
-
-    </div>
-  )
+			<main className='min-h-screen flex flex-col justify-center'>
+				<img
+					className='m-auto my-4 w-24 sm:w-auto'
+					alt='Ihatetomatoes'
+					src='/assets/img_logo.svg'
+				/>
+				<h1 className='mx-auto text-4xl font-bold'>
+					Welcome to Next.js example!
+				</h1>
+			</main>
+		</div>
+	);
 }
 ```
 
@@ -153,28 +152,29 @@ it will ask your pc login(admin) password
 
 A `custom Document` is commonly used to augment your application's <html> and <body> tags. This is necessary because Next.js pages skip the definition of the surrounding document's markup.
 
-`create the file ./pages/_document.js `
+create the file ./pages/\_document.js
+
 ```jsx
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx)
-    return { ...initialProps }
-  }
+	static async getInitialProps(ctx) {
+		const initialProps = await Document.getInitialProps(ctx);
+		return { ...initialProps };
+	}
 
-  render() {
-    return (
-      <Html>
-        <Head />
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    )
-  }
+	render() {
+		return (
+			<Html>
+				<Head />
+				<body>
+					<Main />
+					<NextScript />
+				</body>
+			</Html>
+		);
+	}
 }
 
-export default MyDocument
+export default MyDocument;
 ```
