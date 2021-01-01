@@ -189,3 +189,9 @@ To import SVG as a React component, I have used [SVGR](https://react-svgr.com/do
 we can generate new colors scheme through this [handy generator.](https://javisperez.github.io/tailwindcolorshades/#/)
 
 Modify in `tailwind.config.js`
+
+classnames utility is a great helper for that.
+
+```bash
+yarn add classnames
+```

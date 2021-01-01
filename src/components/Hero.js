@@ -1,4 +1,5 @@
 import { Tick } from '../icons';
+import SignupForm from '../components/SignupForm';
 const outcomes = [
 	'How to build this landing page with Next.js',
 	'How to create API endpoint and integrate with ConvertKit API',
@@ -13,7 +14,7 @@ const ComingSoonBadge = () => (
 
 const Hero = () => {
 	return (
-		<div className='border border-gray-200 md:flex md:flex-row'>
+		<div className='border border-gray-100 md:flex md:flex-row'>
 			<div className='bg-gray-100 text-center flex md:w-1/3'>
 				<img
 					className='object-contain mx-auto'
@@ -36,7 +37,7 @@ const Hero = () => {
 					</ul>
 				)}
 				<ComingSoonBadge />
-				<div>SIGNUP FORM GOES HERE</div>
+				<SignupForm title='Leave your email below, to be notified when this course is ready.' />
 			</div>
 		</div>
 	);
