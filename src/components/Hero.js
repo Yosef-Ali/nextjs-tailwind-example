@@ -5,10 +5,16 @@ const outcomes = [
 	'How to use React Hook Form and TailwindCSS',
 ];
 
+const ComingSoonBadge = () => (
+	<span className='text-white bg-blue-500 text-sm py-2 px-3 rounded-md mb-4 inline-block'>
+		Coming Soon!
+	</span>
+);
+
 const Hero = () => {
 	return (
 		<div className='border border-gray-200 md:flex md:flex-row'>
-			<div className='bg-gray-100 text-center md:w-1/3'>
+			<div className='bg-gray-100 text-center flex md:w-1/3'>
 				<img
 					className='object-contain mx-auto'
 					alt='Next.js 101'
@@ -20,7 +26,7 @@ const Hero = () => {
 				{outcomes && (
 					<ul className='mb-6'>
 						{outcomes.map((i) => (
-							<li className='text-gray-700 flex mb-2'>
+							<li className='text-gray-700 flex mb-2' key={i}>
 								<span className='self-center mr-2'>
 									<Tick className='h-4' />
 								</span>
@@ -29,6 +35,7 @@ const Hero = () => {
 						))}
 					</ul>
 				)}
+				<ComingSoonBadge />
 				<div>SIGNUP FORM GOES HERE</div>
 			</div>
 		</div>

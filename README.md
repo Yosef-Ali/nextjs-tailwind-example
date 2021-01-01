@@ -178,3 +178,14 @@ class MyDocument extends Document {
 
 export default MyDocument;
 ```
+
+## Transform a whole directory of Icons
+
+A whole directory can be processed, all SVG files (matching .svg or .SVG) are transformed into React components.
+To import SVG as a React component, I have used [SVGR](https://react-svgr.com/docs/cli/)
+
+## To customise the default Tailwind color
+
+we can generate new colors scheme through this [handy generator.](https://javisperez.github.io/tailwindcolorshades/#/)
+
+Modify in `tailwind.config.js`
