@@ -143,4 +143,8 @@ export default function Home() {
 
 ```bash
 git add .
+git commit -m 'project setup'
+git push
 ```
+
+it will ask your pc login(admin) password
