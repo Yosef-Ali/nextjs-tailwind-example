@@ -195,3 +195,11 @@ classnames utility is a great helper for that.
 ```bash
 yarn add classnames
 ```
+
+## React Hook Form
+
+Clintside validation
+
+```bash
+yarn add react-hook-form
+```
