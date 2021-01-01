@@ -86,7 +86,7 @@ tailwind.config.js
 
 Inside of `src/styles` we will create tailwind.css with the default layers and delete the other default css files. _`src/styles/tailwind.css`_
 
-```bash
+```js
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -112,7 +112,7 @@ To get the **TailwindCSS autocompletion** in your components you might need to r
 
 `index.js` is the home page of your Next.js project, replace the content with your`s.
 
-```bach
+```jsx
 import Head from 'next/head'
 
 export default function Home() {
@@ -148,3 +148,33 @@ git push
 ```
 
 it will ask your pc login(admin) password
+
+# Pages
+
+A `custom Document` is commonly used to augment your application's <html> and <body> tags. This is necessary because Next.js pages skip the definition of the surrounding document's markup.
+
+`create the file ./pages/_document.js `
+```jsx
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+
+class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
+}
+
+export default MyDocument
+```
