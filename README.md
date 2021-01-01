@@ -138,3 +138,9 @@ export default function Home() {
   )
 }
 ```
+
+# Push everything to GitHub
+
+```bash
+git add .
+```
