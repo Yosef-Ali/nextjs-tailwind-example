@@ -203,3 +203,17 @@ Clintside validation
 ```bash
 yarn add react-hook-form
 ```
+
+## ConvertKit API
+
+Email marketing tool
+
+Create [ConvertKit account ](https://convertkit.com/?lmref=LA8-5Q)
+
+From ConvertKit you will need 3 variables:
+
+`CONVERTKIT_API_URL`
+
+`CONVERTKIT_API_KEY`
+
+`CONVERTKIT_FORM_ID`
